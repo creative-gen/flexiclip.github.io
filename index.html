@@ -12,10 +12,10 @@
   
   <meta charset="utf-8">
   <meta name="description"
-        content="AniClipart: Clipart Animation with Text-to-Video Priors">
-  <meta name="keywords" content="Clipart Animation, Text-to-Video Diffusion, Score Distillation Sampling, As-Rigid-As-Possible Shape Deformation">
+        content="FlexiClip: Locality-Preserving Free-Form Character Animation">
+  <meta name="keywords" content="Clipart Animation, Text-to-Video Diffusion, Score Distillation Sampling, Temporal Smoothing">
   <meta name="viewport" content="width=device-width, initial-scale=0.1">
-  <title>AniClipart: Clipart Animation with Text-to-Video Priors</title>
+  <title>FlexiClip: Locality-Preserving Free-Form Character Animation</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -43,41 +43,38 @@
     <div class="container is-max-desktop" id="top">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">AniClipart: Clipart Animation with<br>Text-to-Video Priors</h1>
+          <h1 class="title is-1 publication-title">FlexiClip: Locality-Preserving<br>Free-Form Character Animation</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><a href="https://kingnobro.github.io/" target="_blank">Ronghuan Wu</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="https://ansire.github.io/" target="_blank">Wanchao Su</a><sup>2</sup>,</span>
-            <span class="author-block"><a href="https://kedema.org/" target="_blank">Kede Ma</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="https://www.cityu.edu.hk/stfprofile/jingliao.htm" target="_blank">Jing Liao</a><sup>1</sup></span>
+            <span class="author-block"><a href="https://flexiclip.github.io/" target="_blank">Anonymous</a><sup>1</sup>,</span>
           </div>
           <div class="is-size-6 publication-authors">
-            <span class="author-block"><sup>1</sup>City University of Hong Kong, <sup>2</sup>Monash University</span> 
+            <span class="author-block"><sup>1</sup>TBD</span> 
           </div>
           <br>
           <div class="is-size-4 publication-authors">
-            <span class="author-block">International Journal of Computer Vision (IJCV)</span> 
+            <span class="author-block">Under Review</span> 
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2404.12347" target="_blank"
+                <a href="https://flexiclip.github.io" target="_blank"
                   class="external-link button is-normal is-rounded">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>arXiv(Coming Soon)</span>
                 </a>
               </span>
             
 
               <span class="link-block">
-                <a href="https://github.com/kingnobro/AniClipart" target="_blank"
+                <a href="https://flexiclip.github.io" target="_blank"
                 class="external-link button is-normal is-rounded">
                 <span class="icon">
                   <i class="fab fa-github"></i>
                 </span>
-                <span>Code</span>
+                <span>Code(Coming Soon)</span>
               </a>
               </span>
            
@@ -166,9 +163,7 @@
       <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
         <p>
-          Clipart, a pre-made art form, offers a convenient and efficient way of creating visual content. However, traditional workflows for animating static clipart are laborious and time-consuming, involving steps like rigging, keyframing, and inbetweening. Recent advancements in text-to-video generation hold great potential in resolving this challenge. Nevertheless, direct application of text-to-video models often struggles to preserve the visual identity of clipart or generate cartoon-style motion, resulting in subpar animation outcomes.
-          <br>
-          In this paper, we introduce AniClipart, a computational system that converts static clipart into high-quality animations guided by text-to-video priors. To generate natural, smooth, and coherent motion, we first parameterize the motion trajectories of the keypoints defined over the initial clipart image by cubic Bézier curves. We then align these motion trajectories with a given text prompt by optimizing a video Score Distillation Sampling (SDS) loss and a skeleton fidelity loss. By incorporating differentiable As-Rigid-As-Possible (ARAP) shape deformation and differentiable rendering, AniClipart can be end-to-end optimized while maintaining deformation rigidity. Extensive experimental results show that the proposed AniClipart consistently outperforms the competing methods, in terms of text-video alignment, visual identity preservation, and temporal consistency. Additionally, we showcase the versatility of AniClipart by adapting it to generate layered animations, which allow for topological changes.
+          Character animation often requires a delicate balance between dynamic motion and the preservation of local structures and temporal coherence. Achieving this balance in free-form character animation, where intricate motions and topological consistency must be maintained, poses significant challenges that traditional methods struggle to overcome. In this work, we introduce FlexiClip, a novel animation framework designed to generate smooth, natural animations while preserving the spatial integrity of keypoints and maintaining temporal consistency across frames. At the core of our approach is the use of residual Jacobians, learned via Neural Ordinary Differential Equations (ODEs), to correct temporal errors without compromising geometric precision. We propose a novel formulation that constrains the ODE to focus exclusively on temporal corrections aggregated over previous frames. To achieve this, we employ a flow matching loss function, which effectively reduces temporal noise and ensures seamless transitions throughout the motion sequence. Extensive experiments and ablation studies demonstrate that FlexiClip outperforms existing methods by producing animations that are smooth, natural, and geometrically consistent. Additionally, our framework supports complex motions involving rotational dynamics, handles multiple conditions specified in text prompts, animates multiple objects within a single image, and generates longer animation sequences. These capabilities highlight its significant improvements in addressing diverse and challenging animation scenarios.
         </p>
         </div>
     </div>
@@ -188,9 +183,9 @@
           <div class="content has-text-justified">
               <br>
               Given an initial clipart image with <i>M</i> keypoints, we initialize <i>M</i> corresponding cubic Bézier motion trajectories, parameterized by {c<sup>(i)</sup>}<sub>i=0</sub><sup>M-1</sup>.
-              For a sequence of <i>N</i> frames, keypoints are updated at each frame by sampling along these trajectories. The displaced keypoints are responsible for driving the ARAP shape deformation algorithm, which warps the object, represented by a triangle mesh, into new poses.
-              This gives rise to a clipart animation, which is (optionally rasterized and) passed to a T2V model to compute the video SDS loss.
-              To ensure motion coherence across all keypoints, a skeleton fidelity loss is also applied, penalizing changes in bone lengths over time.
+              For a sequence of <i>N</i> frames, keypoints are updated at each frame by sampling along these trajectories. FlexiClip leverages pfODE for continuous-time modeling on top of spatial posing, and a flow matching loss for re-
+ducing temporal noise, enabling smooth, natural animations across
+complex motion sequences.
           </div>
       </div>
   </div>
