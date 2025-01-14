@@ -45,7 +45,7 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">FlexiClip: Locality-Preserving<br>Free-Form Character Animation</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><a href="https://flexiclip.github.io/" target="_blank">Anonymous</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://creative-gen.github.io/flexiclip.github.io/" target="_blank">Anonymous</a><sup>1</sup>,</span>
           </div>
           <div class="is-size-6 publication-authors">
             <span class="author-block"><sup>1</sup>TBD</span> 
@@ -58,7 +58,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://flexiclip.github.io" target="_blank"
+                <a href="https://creative-gen.github.io/flexiclip.github.io/" target="_blank"
                   class="external-link button is-normal is-rounded">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -69,7 +69,7 @@
             
 
               <span class="link-block">
-                <a href="https://flexiclip.github.io" target="_blank"
+                <a href="https://creative-gen.github.io/flexiclip.github.io/" target="_blank"
                 class="external-link button is-normal is-rounded">
                 <span class="icon">
                   <i class="fab fa-github"></i>
@@ -110,14 +110,14 @@
             <span class="link-block">
               <a href="#complex_trajectory"
                  class="nav-link button-55 is-normal">
-                <span>Complex Trajectory</span>
+                <span>Comparison with AniClipart</span>
                 </a>
             </span>
             
             <span class="link-block">
               <a href="#comparisons"
                  class="nav-link button-55 is-normal">
-                <span>Comparisons</span>
+                <span>Comparison with T2V/I2V</span>
                 </a>
             </span>
 
@@ -182,10 +182,7 @@
           <img id="network" src="static/images/method/pipeline.png" />
           <div class="content has-text-justified">
               <br>
-              Given an initial clipart image with <i>M</i> keypoints, we initialize <i>M</i> corresponding cubic Bézier motion trajectories, parameterized by {c<sup>(i)</sup>}<sub>i=0</sub><sup>M-1</sup>.
-              For a sequence of <i>N</i> frames, keypoints are updated at each frame by sampling along these trajectories. FlexiClip leverages pfODE for continuous-time modeling on top of spatial posing, and a flow matching loss for re-
-ducing temporal noise, enabling smooth, natural animations across
-complex motion sequences.
+              FlexiClip is a novel approach for creating smooth, temporally coherent, and geometrically consistent animated clipart. It extends the state of the art by addressing key challenges such as noise accumulation and structural consistency across frames. For an initial clipart image with <i>M</i> keypoints, FlexiClip assigns <i>M</i> cubic Bézier curves to represent spatial motion trajectories, parameterized as {c<sup>(i)</sup>}<sub>i=0</sub><sup>M-1</sup>. FlexiClip introduces temporal Jacobians to incrementally correct motion dynamics over time, utilizes probability flow ODE (pfODE) for continuous-time temporal corrections, and employs a flow matching loss inspired by GFlowNet to reduce temporal noise effectively. By integrating these innovations with video Score Distillation Sampling (SDS), FlexiClip enables the generation of natural, consistent animations, even for complex, non-rigid motions.
           </div>
       </div>
   </div>
@@ -212,7 +209,7 @@ complex motion sequences.
         <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/man_dive.svg" alt="man_dive"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/man_dive.gif" alt="man_dive"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/man_dive.gif" alt="man_dive"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A man is scuba diving and swaying fins." title="">A man is scuba diving [..]</h6>
       </div>
@@ -220,7 +217,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_dance.svg" alt="woman_dance"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/woman_dance.gif" alt="woman_dance"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_dance.gif" alt="woman_dance"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A woman dancer is dancing the Cha-Cha." title="">A woman dancer is dancing [..]</h6>
       </div>
@@ -228,7 +225,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/man_dance.svg" alt="man_dance"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/man_dance.gif" alt="man_dance"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/man_dance.gif" alt="man_dance"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A bearded man is dancing with the music, his legs squatting up and down slightly, his hands waving in the air." title="">A bearded man is dancing [..]</h6>
       </div>
@@ -236,7 +233,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/balloon.svg" alt="balloon"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/balloon.gif" alt="balloon"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/balloon.gif" alt="balloon"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A balloon floating in the air." title="">A balloon floating in the [..]</h6>
       </div>
@@ -244,7 +241,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_exercise.svg" alt="woman_exercise"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/woman_exercise.gif" alt="woman_exercise"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_exercise.gif" alt="woman_exercise"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A young girl is exercising in lunging position, lifting dumbbells." title="">A young girl is exercising [..]</h6>
       </div>
@@ -252,7 +249,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/man_wave.svg" alt="man_wave"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/man_wave.gif" alt="man_wave"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/man_wave.gif" alt="man_wave"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A young man is waving his arms to say hello." title="">A young man is waving [..]</h6>
       </div>
@@ -260,7 +257,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/cloud.svg" alt="cloud"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/cloud.gif" alt="cloud"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/cloud.gif" alt="cloud"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A cloud floats in the sky." title="">A cloud floats in the [..]</h6>
       </div>
@@ -268,7 +265,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/flower.svg" alt="flower"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/flower.gif" alt="flower"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/flower.gif" alt="flower"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A flower sways its petals in the breeze." title="">A flower sways its petals [..]</h6>
       </div>
@@ -276,47 +273,47 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/crab.svg" alt="crab"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/crab.gif" alt="crab"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/crab.gif" alt="crab"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A crab is waving its pincers and legs continuously." title="">A crab is waving its [..]</h6>
       </div>
       
       <div class="captioned_video">
           <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/snowman.svg" alt="snowman"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/snowman.gif" alt="snowman"/>
+          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/couple_dance.svg" alt="couple_dance"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/couple_dance.gif" alt="couple_dance"/>
           </div>
-          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A snowman is waving its arms cheerfully." title="">A snowman is waving its [..]</h6>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="Couple dancing and celebrating." title="">Couple dancing and [..]</h6>
       </div>
       
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_dance2.svg" alt="woman_dance2"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/woman_dance2.gif" alt="woman_dance2"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_dance2.gif" alt="woman_dance2"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A woman dancer is dancing with her legs moving up and down, and waving her hands" title="">A woman dancer is dancing [..]</h6>
       </div>
       
       <div class="captioned_video">
           <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/bug.svg" alt="bug"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/bug.gif" alt="bug"/>
+          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/boy_racket.svg" alt="boy_racket"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/boy_racket.gif" alt="boy_racket"/>
           </div>
-          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="a cheerful green caterpillar is arching and contracting its body." title="">a cheerful green caterpillar is [..]</h6>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A boy is jumping to hit the shuttlecock" title="">A boy is jumping to hit [..]</h6>
       </div>
       
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_dance3.svg" alt="woman_dance3"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/woman_dance3.gif" alt="woman_dance3"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_dance3.gif" alt="woman_dance3"/>
           </div>
-          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A woman in a green dress with black polka dots and black boots is dancing joyfully." title="">A woman in a green [..]</h6>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A woman in a green dress with black polka dots and black boots is dancing and folding hands in her move" title="">A woman in a green [..]</h6>
       </div>
       
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/bat2.svg" alt="bat2"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/bat2.gif" alt="bat2"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/bat2.gif" alt="bat2"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A bat is flapping its wings up and down." title="">A bat is flapping its [..]</h6>
       </div>
@@ -324,7 +321,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/ghost2.svg" alt="ghost2"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/ghost2.gif" alt="ghost2"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/ghost2.gif" alt="ghost2"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The Halloween ghost is cheering and waving its arms." title="">The Halloween ghost is cheering [..]</h6>
       </div>
@@ -332,7 +329,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/balloon_dog.svg" alt="balloon_dog"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/balloon_dog.gif" alt="balloon_dog"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/balloon_dog.gif" alt="balloon_dog"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A galloping dog" title="">A galloping dog [..]</h6>
       </div>
@@ -340,7 +337,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_jump.svg" alt="woman_jump"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/woman_jump.gif" alt="woman_jump"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_jump.gif" alt="woman_jump"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A young girl jumps up and down." title="">A young girl jumps up [..]</h6>
       </div>
@@ -348,7 +345,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_dance4.svg" alt="woman_dance4"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/woman_dance4.gif" alt="woman_dance4"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_dance4.gif" alt="woman_dance4"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A woman in a flowing dance move, squatting slightly with her legs, wearing a red top, blue skirt, and black ankle boots." title="">A woman in a flowing [..]</h6>
       </div>
@@ -356,7 +353,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/man_fencing.svg" alt="man_fencing"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/man_fencing.gif" alt="man_fencing"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/man_fencing.gif" alt="man_fencing"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A fencer in en garde position, ready to advance." title="">A fencer in en garde [..]</h6>
       </div>
@@ -364,23 +361,23 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/kite.svg" alt="kite"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/kite.gif" alt="kite"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/kite.gif" alt="kite"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A kite is floating in the sky." title="">A kite is floating in [..]</h6>
       </div>
       
       <div class="captioned_video">
           <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/snail.svg" alt="snail"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/snail.gif" alt="snail"/>
+          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_skating.svg" alt="woman_skating"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_skating.gif" alt="woman_skating"/>
           </div>
-          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A snail is moving." title="">A snail is moving. [..]</h6>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A woman doing skating with wheels on her legs" title="">A woman doing skating. [..]</h6>
       </div>
       
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/parrot.svg" alt="parrot"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/parrot.gif" alt="parrot"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/parrot.gif" alt="parrot"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The parrot flapping its wings." title="">The parrot flapping its wings. [..]</h6>
       </div>
@@ -388,7 +385,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/dolphin2.svg" alt="dolphin2"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/dolphin2.gif" alt="dolphin2"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/dolphin2.gif" alt="dolphin2"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A dolphin swimming and leaping out of the water, bending its body flexibly." title="">A dolphin swimming and leaping [..]</h6>
       </div>
@@ -396,7 +393,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/turtle.svg" alt="turtle"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/turtle.gif" alt="turtle"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/turtle.gif" alt="turtle"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A turtle floats up and down in the water, extending and retracting its legs." title="">A turtle floats up and [..]</h6>
       </div>
@@ -404,7 +401,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/spider.svg" alt="spider"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/spider.gif" alt="spider"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/spider.gif" alt="spider"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A spider sways its legs." title="">A spider sways its legs. [..]</h6>
       </div>
@@ -412,7 +409,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/man_jump.svg" alt="man_jump"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/man_jump.gif" alt="man_jump"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/man_jump.gif" alt="man_jump"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A young man jumps up and down." title="">A young man jumps up [..]</h6>
       </div>
@@ -420,7 +417,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_yoga.svg" alt="woman_yoga"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/woman_yoga.gif" alt="woman_yoga"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_yoga.gif" alt="woman_yoga"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A woman is practicing yoga, bending her torso back and forth while extending her legs vertically." title="">A woman is practicing yoga, [..]</h6>
       </div>
@@ -428,23 +425,23 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/starfish.svg" alt="starfish"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/starfish.gif" alt="starfish"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/starfish.gif" alt="starfish"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A starfish is waving its tentacles softly." title="">A starfish is waving its [..]</h6>
       </div>
       
       <div class="captioned_video">
           <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/spaceship.svg" alt="spaceship"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/spaceship.gif" alt="spaceship"/>
+          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_handball.svg" alt="woman_handball"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_handball.gif" alt="woman_handball"/>
           </div>
-          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The spaceship accelerates rapidly during takeoff, flies into the sky." title="">The spaceship accelerates rapidly during [..]</h6>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A girl is jumping to throw the handball." title="">A girl is jumping [..]</h6>
       </div>
       
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/man_dance2.svg" alt="man_dance2"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/man_dance2.gif" alt="man_dance2"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/man_dance2.gif" alt="man_dance2"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A person wearing a pumpkin mask, pink tutu, and orange socks is in an energetic dance with arms raised." title="">A person wearing a pumpkin [..]</h6>
       </div>
@@ -452,7 +449,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_surf.svg" alt="woman_surf"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/woman_surf.gif" alt="woman_surf"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_surf.gif" alt="woman_surf"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A surfer riding and maneuvering on waves on a surfboard." title="">A surfer riding and maneuvering [..]</h6>
       </div>
@@ -460,15 +457,15 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/parachute.svg" alt="parachute"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/parachute.gif" alt="parachute"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/parachute.gif" alt="parachute"/>
           </div>
-          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A parachute descending slowly and gracefully after being deployed." title="">A parachute descending slowly and [..]</h6>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A parachute descending gracefully after being deployed." title="">A parachute descending [..]</h6>
       </div>
       
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/octopus.svg" alt="octopus"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/octopus.gif" alt="octopus"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/octopus.gif" alt="octopus"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="An octopus is swimming and swaying its tentacles." title="">An octopus is swimming and [..]</h6>
       </div>
@@ -476,23 +473,23 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/man_boxing.svg" alt="man_boxing"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/man_boxing.gif" alt="man_boxing"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/man_boxing.gif" alt="man_boxing"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="Boxing guy is punching and dodging." title="">Boxing guy is punching and [..]</h6>
       </div>
       
       <div class="captioned_video">
           <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/shrimp.svg" alt="shrimp"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/shrimp.gif" alt="shrimp"/>
+          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_kathak.svg" alt="woman_kathak"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_kathak.gif" alt="woman_kathak"/>
           </div>
-          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A shrimp is swmming and swaying its tentacles." title="">A shrimp is swmming and [..]</h6>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A woman doing classical indian dance." title="">A woman doing classical [..]</h6>
       </div>
       
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_wave.svg" alt="woman_wave"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/woman_wave.gif" alt="woman_wave"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_wave.gif" alt="woman_wave"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A young girl is waving her arms to say goodbye." title="">A young girl is waving [..]</h6>
       </div>
@@ -500,7 +497,7 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/man_demon.svg" alt="man_demon"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/man_demon.gif" alt="man_demon"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/man_demon.gif" alt="man_demon"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The man in demon costume is cheering, waving both arms up and down." title="">The man in demon costume [..]</h6>
       </div>
@@ -508,9 +505,57 @@ complex motion sequences.
       <div class="captioned_video">
           <div class="inner_gallery">
           <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/palm.svg" alt="palm"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/palm.gif" alt="palm"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/palm.gif" alt="palm"/>
           </div>
           <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The palm tree sways the leaves in the wind." title="">The palm tree sways the [..]</h6>
+      </div>
+
+      <div class="captioned_video">
+          <div class="inner_gallery">
+          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_jhoola.svg" alt="woman_jhoola"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_jhoola.gif" alt="woman_jhoola"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A girl is swaying on the hammock hanging on tree." title="">A girl is swaying [..]</h6>
+      </div>
+
+     <div class="captioned_video">
+          <div class="inner_gallery">
+          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_racket.svg" alt="woman_racket"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_racket.gif" alt="woman_racket"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A girl is jumping to hit the shuttlecock" title="">A girl is jumping [..]</h6>
+      </div>
+
+      <div class="captioned_video">
+          <div class="inner_gallery">
+          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/woman_fashion.svg" alt="woman_fashion"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/woman_fashion.gif" alt="woman_fashion"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A woman showcasing her fancy dress" title="">A woman showcasing [..]</h6>
+      </div>
+
+      <div class="captioned_video">
+          <div class="inner_gallery">
+          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/couple_dance2.svg" alt="couple_dance2"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/couple_dance2.gif" alt="couple_dance2"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="Couple dancing together doing romance and love" title="">Couple dancing together [..]</h6>
+      </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/couple_dance6.svg" alt="couple_dance6"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/couple_dance6.gif" alt="couple_dance6"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="Couple romancing while dancing" title="">Couple romancing [..]</h6>
+      </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/svgs/couple_dance7.svg" alt="couple_dance7"/>
+          <img class="gallery_img under grid_r_1 grid_c_1" src="static/gifs/gallery/outputs/couple_dance7.gif" alt="couple_dance7"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="Couple romancing while dancing" title="">Couple romancing [..]</h6>
       </div>
       
       </div>
@@ -533,17 +578,17 @@ complex motion sequences.
       </div>
     <div class="columns is-centered has-text-centered is-variable is-8">
       <div class="column is-three-fifths is-centered">
-        <img class="comp_src_img" src="static/images/svgs/woman_dance3.svg" alt="woman_dance"/>
+        <img class="comp_src_img" src="static/images/svgs/woman_jump.svg" alt="woman_dance"/>
           <div class="prompt_gallery">
             <div class="captioned_video">
-              <img class="varying_img" src="static/videos/multiprompt/woman/woman_dance.gif" alt="woman_dance"/>
-              <h6 class="caption">"... dancing."</h6>
+              <img class="varying_img" src="static/videos/multiprompt/woman/woman_jump.gif" alt="woman_jump"/>
+              <h6 class="caption">"... jumping."</h6>
             </div>
             <div class="captioned_video">
-              <img class="varying_img" src="static/videos/multiprompt/woman/woman_arm.gif" alt="woman_dance"/>
-              <h6 class="caption">"... bending arms."</h6>
+              <img class="varying_img" src="static/videos/multiprompt/woman/woman_squat.gif" alt="woman_squat"/>
+              <h6 class="caption">"... squating."</h6>
             </div>
-            <div class="captioned_video">
+            <!-- <div class="captioned_video">
               <img class="varying_img" src="static/videos/multiprompt/woman/woman_jump.gif" alt="woman_dance"/>
               <h6 class="caption">"... jumping."</h6>
             </div>
@@ -558,7 +603,7 @@ complex motion sequences.
             <div class="captioned_video">
               <img class="varying_img" src="static/videos/multiprompt/woman/woman_wave.gif" alt="bike"/>
               <h6 class="caption">"... waving hands."</h6>
-            </div>
+            </div> -->
           </div>
       </div>
     </div>
@@ -583,23 +628,6 @@ complex motion sequences.
     <div class="columns is-centered has-text-centered is-variable is-8">
       <div class="column is-one-fifths is-centered">
           <div class="layered_gallery">
-            <div class="captioned_video">
-              <img class="layered_img" src="static/videos/layered_animation/layer/camel.gif" alt="camel"/>
-              <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A camel is walking." title=""><b>Multi-Layer</b> [..]</h6>
-            </div>
-            <div class="captioned_video">
-              <img class="layered_img" src="static/videos/layered_animation/no_layer/camel.gif" alt="camel"/>
-              <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A camel is walking." title=""><i>Single-Layer</i> [..]</h6>
-            </div>
-
-            <div class="captioned_video">
-              <img class="layered_img" src="static/videos/layered_animation/layer/bird.gif" alt="camel"/>
-              <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A bird flapping wings." title=""><b>Multi-Layer</b> [..]</h6>
-            </div>
-            <div class="captioned_video">
-              <img class="layered_img" src="static/videos/layered_animation/no_layer/bird.gif" alt="camel"/>
-              <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A bird flapping wings." title=""><i>Single-Layer</i> [..]</h6>
-            </div>
 
             <div class="captioned_video">
               <img class="layered_img" src="static/videos/layered_animation/layer/man_boxing.gif" alt="camel"/>
@@ -618,24 +646,6 @@ complex motion sequences.
               <img class="layered_img" src="static/videos/layered_animation/no_layer/man_breaking.gif" alt="camel"/>
               <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="Breakdancer performing an inverted freeze with one hand on the floor and legs artistically intertwined in the air." title=""><i>Single-Layer</i> [..]</h6>
             </div>
-
-            <div class="captioned_video">
-              <img class="layered_img" src="static/videos/layered_animation/layer/man_rap.gif" alt="camel"/>
-              <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A rapper is singing, moving his hands and body to the rhythm of the music." title=""><b>Multi-Layer</b> [..]</h6>
-            </div>
-            <div class="captioned_video">
-              <img class="layered_img" src="static/videos/layered_animation/no_layer/man_rap.gif" alt="camel"/>
-              <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A rapper is singing, moving his hands and body to the rhythm of the music." title=""><i>Single-Layer</i> [..]</h6>
-            </div>
-
-            <div class="captioned_video">
-              <img class="layered_img" src="static/videos/layered_animation/layer/man_skiing.gif" alt="camel"/>
-              <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A man is skiing down the slope." title=""><b>Multi-Layer</b> [..]</h6>
-            </div>
-            <div class="captioned_video">
-              <img class="layered_img" src="static/videos/layered_animation/no_layer/man_skiing.gif" alt="camel"/>
-              <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A man is skiing down the slope." title=""><i>Single-Layer</i> [..]</h6>
-            </div>
           </div>
       </div>
     </div>
@@ -643,7 +653,7 @@ complex motion sequences.
 
 <!-- Complex Trajectory -->
 <section class="section">
-  <div class="container is-widescreen" id="complex_trajectory">
+  <div class="container is-widescreen" id="comparison_AniClipart">
     <div class="link-block ">
       <a href="#top"
           class="nav-link button-55 is-normal">
@@ -651,46 +661,46 @@ complex motion sequences.
         </a>
     </div>
     <div class="section-title has-text-centered is-centered">
-      <h2 class="title is-3">High-Order Bézier Trajectory </h2>
+      <h2 class="title is-3">Comparision with AniClipart</h2>
               <br>
     </div>
     <div class="columns is-centered has-text-centered is-variable is-8">
       <div class="column is-one-fifths is-centered">
           <div class="trajectory_gallery">
             <div class="captioned_video">
-              <img class="trajectory_img" src="static/videos/complex_trajectory/short_path/dolphin2.gif" alt="camel"/>
-              <h6 class="caption">Cubic Bézier Trajectory (4 points)</h6>
+              <img class="trajectory_img" src="static/videos/comparision_AniClipart/AniClipart/woman_dance.gif" alt="camel"/>
+              <h6 class="caption">AniClipart</h6>
             </div>
             <div class="captioned_video">
-              <img class="trajectory_img" src="static/videos/complex_trajectory/long_path/dolphin2.gif" alt="camel"/>
-              <h6 class="caption">Complex Bézier Trajectory (16 points)</h6>
-            </div>
-
-            <div class="captioned_video">
-              <img class="trajectory_img" src="static/videos/complex_trajectory/short_path/woman_dance3.gif" alt="woman_dance3"/>
-              <h6 class="caption">Cubic Bézier Trajectory (4 points)</h6>
-            </div>
-            <div class="captioned_video">
-              <img class="trajectory_img" src="static/videos/complex_trajectory/long_path/woman_dance3.gif" alt="woman_dance3"/>
-              <h6 class="caption">Complex Bézier Trajectory (16 points)</h6>
+              <img class="trajectory_img" src="static/videos/comparision_AniClipart/FlexiClip/woman_dance.gif" alt="camel"/>
+              <h6 class="caption">FlexiClip</h6>
             </div>
 
             <div class="captioned_video">
-              <img class="trajectory_img" src="static/videos/complex_trajectory/short_path/man_demon.gif" alt="man_demon"/>
-              <h6 class="caption">Cubic Bézier Trajectory (4 points)</h6>
+              <img class="trajectory_img" src="static/videos/comparision_AniClipart/AniClipart/parrot.gif" alt="woman_dance3"/>
+              <h6 class="caption">AniClipart</h6>
             </div>
             <div class="captioned_video">
-              <img class="trajectory_img" src="static/videos/complex_trajectory/long_path/man_demon.gif" alt="man_demon"/>
-              <h6 class="caption">Complex Bézier Trajectory (16 points)</h6>
+              <img class="trajectory_img" src="static/videos/comparision_AniClipart/FlexiClip/parrot.gif" alt="woman_dance3"/>
+              <h6 class="caption">FlexiClip</h6>
+            </div>
+
+            <div class="captioned_video">
+              <img class="trajectory_img" src="static/videos/comparision_AniClipart/AniClipart/boy_racket.gif" alt="man_demon"/>
+              <h6 class="caption">AniClipart</h6>
+            </div>
+            <div class="captioned_video">
+              <img class="trajectory_img" src="static/videos/comparision_AniClipart/FlexiClip/boy_racket.gif" alt="man_demon"/>
+              <h6 class="caption">FlexiClip</h6>
             </div>
             
             <div class="captioned_video">
-              <img class="trajectory_img" src="static/videos/complex_trajectory/short_path/starfish.gif" alt="starfish"/>
-              <h6 class="caption">Cubic Bézier Trajectory (4 points)</h6>
+              <img class="trajectory_img" src="static/videos/comparision_AniClipart/AniClipart/woman_handball.gif" alt="starfish"/>
+              <h6 class="caption">AniClipart</h6>
             </div>
             <div class="captioned_video">
-              <img class="trajectory_img" src="static/videos/complex_trajectory/long_path/starfish.gif" alt="starfish"/>
-              <h6 class="caption">Complex Bézier Trajectory (16 points)</h6>
+              <img class="trajectory_img" src="static/videos/comparision_AniClipart/FlexiClip/woman_handball.gif" alt="starfish"/>
+              <h6 class="caption">FlexiClip</h6>
             </div>
           </div>
       </div>
@@ -700,7 +710,7 @@ complex motion sequences.
 
 <!-- Comparisons -->
 <section class="section hero is-light">
-  <div class="container is-widescreen" id="comparisons">
+  <div class="container is-widescreen" id="comparison_i2v">
     <div class="link-block ">
       <a href="#top"
           class="nav-link button-55 is-normal">
@@ -708,72 +718,117 @@ complex motion sequences.
         </a>
     </div>
     <div class="section-title has-text-centered is-centered">
-      <h2 class="title is-3">Comparisons to T2V Models & Prior Work</h2><br>
+      <h2 class="title is-3">Comparisons to T2V/I2V Models</h2><br>
     </div>
     <div class="columns is-centered has-text-centered is-variable is-8">
       <div class="column is-two-fifths is-centered has_border_right">
-        <img class="comp_src_img" src="static/images/svgs/man_fencing.svg" alt="man_fencing"/>
+        <img class="comp_src_img" src="static/images/svgs/parrot.svg" alt="parrot"/>
           <div class="comp_gallery">
-
             <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/comparisons/man_fencing/modelscope.gif" alt="man_fencing"/>
-                <h6 class="caption">ModelScope</h6>
-            </div>
-            <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/comparisons/man_fencing/videocrafter.gif" alt="man_fencing"/>
-                <h6 class="caption">VideoCrafter</h6>
-            </div>
-            <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/comparisons/man_fencing/dynamicrafter.gif" alt="man_fencing"/>
+                <img class="gallery_img" src="static/videos/comparison_T2V/parrot/dynamicCrafterParrot.gif" alt="parrot"/>
                 <h6 class="caption">DynamiCrafter</h6>
             </div>
             <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/comparisons/man_fencing/vgen.gif" alt="man_fencing"/>
-                <h6 class="caption">I2VGen-XL</h6>
+                <img class="gallery_img" src="static/videos/comparison_T2V/parrot/animateLCM_parrot.gif" alt="parrot"/>
+                <h6 class="caption">AnimateLCM-I2V</h6>
             </div>
             <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/comparisons/man_fencing/livesketch.gif" alt="man_fencing"/>
-                <h6 class="caption">LiveSketch</h6>
+                <img class="gallery_img" src="static/videos/comparison_T2V/parrot/ltxvideo_parrot.gif" alt="parrot"/>
+                <h6 class="caption">LTXVideo</h6>
             </div>
             <div class="captioned_video">
-                <img class="gallery_img" src="static/gifs/gallery/man_fencing.gif" alt="man_fencing"/>
+                <img class="gallery_img" src="static/videos/comparison_T2V/parrot/pyramidFlow_parrot.gif" alt="parrot"/>
+                <h6 class="caption">Pyramid Flow</h6>
+            </div>
+            <div class="captioned_video">
+                <img class="gallery_img" src="static/gifs/gallery/outputs/parrot.gif" alt="parrot"/>
                 <h6 class="caption">Ours</h6>
             </div>
           </div>
       </div>
       <div class="column is-two-fifths is-centered has_border_left">
-        <img class="comp_src_img" src="static/images/svgs/crab.svg" alt="crab"/>
+        <img class="comp_src_img" src="static/images/svgs/woman_dance.svg" alt="crab"/>
           <div class="comp_gallery">
 
             <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/comparisons/crab/modelscope.gif" alt="crab"/>
-                <h6 class="caption">ModelScope</h6>
-            </div>
-            <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/comparisons/crab/videocrafter.gif" alt="crab"/>
-                <h6 class="caption">VideoCrafter</h6>
-            </div>
-            <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/comparisons/crab/dynamicrafter.gif" alt="crab"/>
+                <img class="gallery_img" src="static/videos/comparison_T2V/woman_dance/dynamicCrafterWomanDance.gif" alt="crab"/>
                 <h6 class="caption">DynamiCrafter</h6>
             </div>
             <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/comparisons/crab/vgen.gif" alt="crab"/>
-                <h6 class="caption">I2VGen-XL</h6>
+                <img class="gallery_img" src="static/videos/comparison_T2V/woman_dance/animateLCM_woman_dance.gif" alt="crab"/>
+                <h6 class="caption">AnimateLCM-I2V</h6>
             </div>
             <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/comparisons/crab/livesketch.gif" alt="crab"/>
-                <h6 class="caption">LiveSketch</h6>
+                <img class="gallery_img" src="static/videos/comparison_T2V/woman_dance/ltxvideo_woman_dance.gif" alt="crab"/>
+                <h6 class="caption">LTXVideo</h6>
             </div>
             <div class="captioned_video">
-                <img class="gallery_img" src="static/gifs/gallery/crab.gif" alt="crab"/>
+                <img class="gallery_img" src="static/videos/comparison_T2V/woman_dance/pyramidFlow_woman_dance.gif" alt="crab"/>
+                <h6 class="caption">Pyramid Flow</h6>
+            </div>
+            <div class="captioned_video">
+                <img class="gallery_img" src="static/gifs/gallery/outputs/woman_dance.gif" alt="crab"/>
+                <h6 class="caption">Ours</h6>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered is-variable is-8">
+      <div class="column is-two-fifths is-centered has_border_left">
+        <img class="comp_src_img" src="static/images/svgs/boy_racket.svg" alt="crab"/>
+          <div class="comp_gallery">
+
+            <div class="captioned_video">
+                <img class="gallery_img" src="static/videos/comparison_T2V/boy_racket/dynamicCrafterBoyRacket.gif" alt="crab"/>
+                <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+                <img class="gallery_img" src="static/videos/comparison_T2V/boy_racket/animateLCM_boy_racket.gif" alt="crab"/>
+                <h6 class="caption">AnimateLCM-I2V</h6>
+            </div>
+            <div class="captioned_video">
+                <img class="gallery_img" src="static/videos/comparison_T2V/boy_racket/ltxvideo_boy_racket.gif" alt="crab"/>
+                <h6 class="caption">LTXVideo</h6>
+            </div>
+            <div class="captioned_video">
+                <img class="gallery_img" src="static/videos/comparison_T2V/boy_racket/pyramidFlow_boy_rocket.gif" alt="crab"/>
+                <h6 class="caption">Pyramid Flow</h6>
+            </div>
+            <div class="captioned_video">
+                <img class="gallery_img" src="static/gifs/gallery/outputs/boy_racket.gif" alt="crab"/>
+                <h6 class="caption">Ours</h6>
+            </div>
+          </div>
+      </div>
+      <div class="column is-two-fifths is-centered has_border_left">
+        <img class="comp_src_img" src="static/images/svgs/woman_handball.svg" alt="crab"/>
+          <div class="comp_gallery">
+
+            <div class="captioned_video">
+                <img class="gallery_img" src="static/videos/comparison_T2V/woman_handball/dynamicCrafterwomanHandball.gif" alt="crab"/>
+                <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+                <img class="gallery_img" src="static/videos/comparison_T2V/woman_handball/animateLCM_woman_handball.gif" alt="crab"/>
+                <h6 class="caption">AnimateLCM-I2V</h6>
+            </div>
+            <div class="captioned_video">
+                <img class="gallery_img" src="static/videos/comparison_T2V/woman_handball/ltxvideo_woman_handball.gif" alt="crab"/>
+                <h6 class="caption">LTXVideo</h6>
+            </div>
+            <div class="captioned_video">
+                <img class="gallery_img" src="static/videos/comparison_T2V/woman_handball/pyramidFlow_woman_handball.gif" alt="crab"/>
+                <h6 class="caption">Pyramid Flow</h6>
+            </div>
+            <div class="captioned_video">
+                <img class="gallery_img" src="static/gifs/gallery/outputs/woman_handball.gif" alt="crab"/>
                 <h6 class="caption">Ours</h6>
             </div>
           </div>
       </div>
     </div>
   <div class="section is-centered has-text-centered">
-    We compare our method to five baselines: Four Text-to-Video (T2V) diffusion models (<a href="https://huggingface.co/ali-vilab/modelscope-damo-text-to-video-synthesis">ModelScope</a>, <a href="https://ailab-cvc.github.io/videocrafter/">VideoCrafter</a>, <a href="https://github.com/Doubiiu/DynamiCrafter">DynamiCrafter</a> and <a href="https://i2vgen-xl.github.io/">I2VGen-XL</a>) and <a href="https://livesketch.github.io/">LiveSketch</a>.
+    We compare our method to four baselines: Four Text/Image-to-Video (T2V/I2V) diffusion models (<a href="https://huggingface.co/ali-vilab/modelscope-damo-text-to-video-synthesis">AnimateLCM-I2V</a>, <a href="https://ailab-cvc.github.io/videocrafter/">LTXVideo</a>, <a href="https://github.com/Doubiiu/DynamiCrafter">DynamiCrafter</a> and <a href="https://i2vgen-xl.github.io/">Pyramid Flow</a>).
     </div>
   </div>
 </section>
@@ -791,66 +846,33 @@ complex motion sequences.
         <h2 class="title is-3">Ablation Study</h2><br>
       </div>
         <div class="columns is-centered has-text-centered is-variable is-8">
-          <div class="column is-one-quarters is-centered">
+          <div class="column is-one-half is-centered">
             <div class="ablation_gallery">
 
               <div class="captioned_video">
-                <img class="gallery_img" src="static/images/svgs/man_dance.svg" alt="man_dance"/>
+                <img class="gallery_img" src="static/images/svgs/parrot.svg" alt="parrot"/>
               </div>
           
               <div class="captioned_video">
-                <img class="gallery_img" src="static/gifs/gallery/man_dance.gif" alt="ours"/>
+                <img class="gallery_img" src="static/gifs/gallery/outputs/parrot.gif" alt="ours"/>
               </div>
 
               <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/ablation/LBS/man_dance.gif" alt="lbs"/>
+                <img class="gallery_img" src="static/videos/ablation/WRS/parrot.gif" alt="WRS"/>
               </div>
 
               <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/ablation/optim_keypoint/man_dance.gif" alt="optim_keypoint"/>
-              </div>
-
-              <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/ablation/linear_interp/man_dance.gif" alt="linear_interp"/>
-              </div>
-
-              <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/ablation/img_sds/man_dance.gif" alt="img_sds"/>
-              </div>
-
-              <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/ablation/no_skeleton/man_dance.gif" alt="no_skeleton"/>
-              </div>
-
-              <div class="captioned_video">
-                <img class="gallery_img" src="static/images/svgs/balloon_dog.svg" alt="balloon_dog"/>
+                <img class="gallery_img" src="static/images/svgs/ghost2.svg" alt="ghost2"/>
               </div>
           
               <div class="captioned_video">
-                <img class="gallery_img" src="static/gifs/gallery/balloon_dog.gif" alt="ours"/>
+                <img class="gallery_img" src="static/gifs/gallery/outputs/ghost2.gif" alt="ours"/>
               </div>
 
               <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/ablation/LBS/balloon_dog.gif" alt="lbs"/>
+                <img class="gallery_img" src="static/videos/ablation/WRS/ghost2.gif" alt="WRS"/>
               </div>
 
-              <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/ablation/optim_keypoint/balloon_dog.gif" alt="optim_keypoint"/>
-              </div>
-
-              <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/ablation/linear_interp/balloon_dog.gif" alt="linear_interp"/>
-              </div>
-
-              <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/ablation/img_sds/balloon_dog.gif" alt="img_sds"/>
-              </div>
-
-              <div class="captioned_video">
-                <img class="gallery_img" src="static/videos/ablation/no_skeleton/balloon_dog.gif" alt="no_skeleton"/>
-              </div>
-          
-      
               <div class="captioned_video">
                 <h6 class="caption">Input Sketch</h6>
               </div>
@@ -858,20 +880,80 @@ complex motion sequences.
                 <h6 class="caption">Default</h6>
               </div>
               <div class="captioned_video">
-                <h6 class="caption">ARAP Deformation → Linear Blend Skinning</h6>
+                <h6 class="caption">w/o Temporal Jacobian</h6>
+              </div>
+
+              <div class="captioned_video">
+                <h6 class="caption">Input Sketch</h6>
               </div>
               <div class="captioned_video">
-                <h6 class="caption"> w/o Bézier Trajectory Parameterization</h6>
+                <h6 class="caption">Default</h6>
               </div>
               <div class="captioned_video">
-                <h6 class="caption">First-order Bézier Trajectory Parameterization</h6>
+                <h6 class="caption">w/o Temporal Jacobian</h6>
+              </div>
+
+              <div class="captioned_video">
+                <img class="gallery_img" src="static/images/svgs/cloud.svg" alt="cloud"/>
+              </div>
+          
+              <div class="captioned_video">
+                <img class="gallery_img" src="static/gifs/gallery/outputs/cloud.gif" alt="ours"/>
+              </div>
+
+              <div class="captioned_video">
+                <img class="gallery_img" src="static/videos/ablation/WRS/cloud.gif" alt="WRS"/>
+              </div>
+
+
+              <div class="captioned_video">
+                <img class="gallery_img" src="static/images/svgs/woman_dance.svg" alt="woman_dance"/>
+              </div>
+          
+              <div class="captioned_video">
+                <img class="gallery_img" src="static/gifs/gallery/outputs/woman_dance.gif" alt="ours"/>
+              </div>
+
+              <div class="captioned_video">
+                <img class="gallery_img" src="static/videos/ablation/WFM/woman_dance.gif" alt="WFM"/>
+              </div>
+
+
+              <div class="captioned_video">
+                <h6 class="caption">Input Sketch</h6>
               </div>
               <div class="captioned_video">
-                <h6 class="caption">Video SDS Loss → Image SDS Loss</h6>
-              </div> 
+                <h6 class="caption">Default</h6>
+              </div>
               <div class="captioned_video">
-                <h6 class="caption">w/o Skeleton Fidelity Loss</h6>
-              </div> 
+                <h6 class="caption">w/o Temporal Jacobian</h6>
+              </div>
+
+              <div class="captioned_video">
+                <h6 class="caption">Input Sketch</h6>
+              </div>
+              <div class="captioned_video">
+                <h6 class="caption">Default</h6>
+              </div>
+              <div class="captioned_video">
+                <h6 class="caption">w/o Flow Matching</h6>
+              </div>
+                
+              <div class="captioned_video">
+                <img class="gallery_img" src="static/images/svgs/man_dance2.svg" alt="man_dance2"/>
+                <h6 class="caption">Input Sketch</h6>
+              </div>
+          
+              <div class="captioned_video">
+                <img class="gallery_img" src="static/gifs/gallery/outputs/man_dance2.gif" alt="ours"/>
+                <h6 class="caption">Default</h6>
+              </div>
+
+              <div class="captioned_video">
+                <img class="gallery_img" src="static/videos/ablation/WFM/man_dance2.gif" alt="WFM"/>
+                <h6 class="caption">w/o Flow Matching</h6>
+              </div>
+                
             </div> 
           </div>
         </div>
